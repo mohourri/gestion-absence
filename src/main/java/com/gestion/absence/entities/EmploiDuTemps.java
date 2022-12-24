@@ -10,13 +10,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity @Data @AllArgsConstructor @NoArgsConstructor 
-public class Module {
+public class EmploiDuTemps {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long ID;
-	String libelle;
-	Integer volumeHoraire;
-	@ManyToOne
+	@ManyToOne 
 	Classe classe;
-	@ManyToOne
-	Enseignant enseignant;
+	Integer semestre;
+	
 }

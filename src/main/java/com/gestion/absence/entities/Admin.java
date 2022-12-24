@@ -1,5 +1,5 @@
 package com.gestion.absence.entities;
 
-public class Admin {
+public class Admin extends User {
 
 }

@@ -1,5 +1,8 @@
 package com.gestion.absence.entities;
 
-public class Enseignant {
+import java.util.ArrayList;
+
+public class Enseignant extends User {
+	ArrayList<Module> modules = new ArrayList<Module>();
 
 }
