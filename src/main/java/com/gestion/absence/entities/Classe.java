@@ -27,10 +27,10 @@ public class Classe {
 	
 	Integer anneeUniversitaire;
 	
-	@OneToMany()
+	@OneToMany(mappedBy = "classe")
 	ArrayList<Module> modules = new ArrayList<Module>();
 	
-	@OneToMany()
+	@OneToMany(mappedBy = "classe")
 	ArrayList<Etudiant> etudiants = new ArrayList<Etudiant>();
 	
 	@OneToOne

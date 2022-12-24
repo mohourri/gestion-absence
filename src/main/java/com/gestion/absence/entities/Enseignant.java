@@ -9,8 +9,7 @@ import jakarta.persistence.OneToMany;
 @Entity
 public class Enseignant extends User {
 	
-	@OneToMany()
-	@JoinColumn(name = "ID")
+	@OneToMany(mappedBy = "enseignant")
 	private ArrayList<Module> modules = new ArrayList<Module>();
 
 	

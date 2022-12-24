@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -28,9 +29,10 @@ public class Cour {
 	Date date; 
 	 
 	@ManyToOne
+	@JoinColumn(name= "id_seance")
 	Seance seance;
 	 
-	@OneToMany
+	@OneToMany(mappedBy = "cour")
 	ArrayList<Absence> absences = new ArrayList<Absence>(); 
 	
 }

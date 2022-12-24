@@ -23,7 +23,7 @@ public class Filiere {
 
 	String libelle;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "filiere")
 	private List<Classe> classes = new ArrayList<Classe>();
 
 }

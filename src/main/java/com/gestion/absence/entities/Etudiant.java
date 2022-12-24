@@ -24,7 +24,7 @@ public class Etudiant {
 	@JoinColumn(name="id_classe")
 	Classe classe;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "etudiant")
 	ArrayList<Absence> absences = new ArrayList<Absence>();
 	
 }

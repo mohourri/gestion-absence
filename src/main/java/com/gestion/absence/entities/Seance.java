@@ -29,7 +29,7 @@ public class Seance {
 	@JoinColumn(name="id_module")
 	Module module;
 	
-	@OneToMany
+	@OneToMany(mappedBy="seance")
 	ArrayList<Cour> cours = new ArrayList<Cour>();
 	
 

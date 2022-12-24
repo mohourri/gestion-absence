@@ -25,7 +25,7 @@ public class Module {
 	
 	@ManyToOne
 	@JoinColumn(name="id_enseignant")
-	Enseignant enseignantT;
+	Enseignant enseignant;
 	
 	
 }
