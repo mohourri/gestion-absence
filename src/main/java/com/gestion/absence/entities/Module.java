@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Module {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long ID;
+	long ID;
 	String libelle;
 	Integer volumeHoraire;
 	
@@ -25,7 +25,7 @@ public class Module {
 	
 	@ManyToOne
 	@JoinColumn(name="id_enseignant")
-	Enseignant enseignant;
+	Enseignant enseignantT;
 	
 	
 }
