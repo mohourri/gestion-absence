@@ -19,8 +19,11 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//fr.save(new Filiere(null, "genie info"));
+		/*fr.save(new Filiere(null, "genie info"));
 		//fr.save(new Filiere(null, "genie industriel"));
+		Filiere f=new Filiere(null, "genie elect");
+		
+		fr.deleteById((long) 23);*/
 	}
 
 }

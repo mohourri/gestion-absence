@@ -1,5 +1,15 @@
 package com.gestion.absence.controllers;
 
-public class EnsiegnanController {
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
+import com.gestion.absence.repository.EnsiengnantRepository;
+
+public class EnsiegnanController {
+  EnsiengnantRepository ensiengnantRepository;
+  @GetMapping("/delete/{ID}")
+  public String deleteenseignant(@PathVariable(name = "ID") Long ID) {
+	  ensiengnantRepository.deleteById(ID);
+ 	 return "/";
+  }
 }

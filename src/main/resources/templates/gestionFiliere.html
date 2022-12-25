@@ -524,16 +524,16 @@ table.table .avatar {
                             <thead>
                                 <tr>
                                     
-                                    <th style="width:350px; border-right:1px solid white;">Filiére</th>
+                                    <th style="width:350px; border-right:1px solid white;">IDFiliére</th>
                                     <th style="width:350px; border-right:1px solid white;">Etablissement</th>
                                     
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr  th:each="filiere :${filieres}">
 
-                                    <td >Génie informatique</td>
-                                    <td style='text-align:center; vertical-align:middle'>fsi</td>
+                                    <td th:text="${filiere.ID}" ></td>
+                                    <td th:text="${filiere.libelle}" style='text-align:center; vertical-align:middle'></td>
                                     
                                     
                                     <td style='text-align:center; vertical-align:middle'>
@@ -548,13 +548,13 @@ table.table .avatar {
                                     <td th:text="${filiere.libelle}" style='text-align:center; vertical-align:middle'></td>
                                    
                                     
-                                    <td style='text-align:center; vertical-align:middle'>
+                                    <td  style='text-align:center; vertical-align:middle'>
                                         <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                         <a href="@{'/delete/' +${filiere.ID}} " class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                         <a href="#ajouterclasse" class="add" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Add">add</i></a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr th:each="filiere :${filieres}">
 
                                     <td  style='text-align:center; vertical-align:middle'>aaaaaaa</td>
                                     <td style='text-align:center; vertical-align:middle'>aaaaaaa</td>
