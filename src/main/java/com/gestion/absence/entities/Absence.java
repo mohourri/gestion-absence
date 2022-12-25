@@ -20,15 +20,12 @@ public class Absence {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
-	
 	Boolean absent = true;
 	
 	@ManyToOne
-	@JoinColumn(name="cne")
 	Etudiant etudiant;
 	
 	@ManyToOne
-	@JoinColumn(name="id_cours")
 	Cour cour;
 	
 }

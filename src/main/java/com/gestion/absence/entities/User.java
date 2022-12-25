@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor @ToString
+@Data @NoArgsConstructor @ToString 
 public class User  {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long ID;
@@ -18,5 +18,13 @@ public class User  {
 	String prenom;
 	String email;
 	String password;
+	
+	public User(String nom, String prenom, String email, String password) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.password = password;
+	}
 
 }

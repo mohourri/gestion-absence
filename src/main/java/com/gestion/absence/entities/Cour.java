@@ -30,7 +30,7 @@ public class Cour {
 	@ManyToOne
 	Seance seance;
 	 
-	@OneToMany
+	@OneToMany(mappedBy = "cour")
 	ArrayList<Absence> absences = new ArrayList<Absence>(); 
 	
 }

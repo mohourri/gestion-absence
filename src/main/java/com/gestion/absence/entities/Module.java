@@ -17,15 +17,10 @@ public class Module {
 	long ID;
 	String libelle;
 	Integer volumeHoraire;
-	
 	@ManyToOne
-	@JoinColumn(name="id_classe")
 	Classe classe;
-	
-	
 	@ManyToOne
-	@JoinColumn(name="id_enseignant")
-	Enseignant enseignantT;
+	Enseignant enseignant;
 	
 	
 }

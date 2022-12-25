@@ -21,10 +21,9 @@ public class Etudiant {
 	String prenom;
 	
 	@ManyToOne()
-	@JoinColumn(name="id_classe")
 	Classe classe;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "etudiant")
 	ArrayList<Absence> absences = new ArrayList<Absence>();
 	
 }

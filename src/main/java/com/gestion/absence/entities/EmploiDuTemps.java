@@ -17,7 +17,6 @@ public class EmploiDuTemps {
 	Long ID;
 	
 	@OneToOne
-	@JoinColumn(name="id_classe")
 	Classe classe;
 	
 	Integer semestre;

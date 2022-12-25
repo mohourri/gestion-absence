@@ -22,14 +22,12 @@ public class Seance {
 	String creneau;
 	
 	@ManyToOne
-	@JoinColumn(name="id_enseignant")
 	Enseignant enseignant;
 	
 	@ManyToOne
-	@JoinColumn(name="id_module")
 	Module module;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "seance")
 	ArrayList<Cour> cours = new ArrayList<Cour>();
 	
 

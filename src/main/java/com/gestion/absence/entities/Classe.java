@@ -22,19 +22,17 @@ public class Classe {
 	Integer niveau;
 	
 	@ManyToOne
-	@JoinColumn(name="id_filliere")
 	Filiere filiere;
 	
 	Integer anneeUniversitaire;
 	
-	@OneToMany()
+	@OneToMany(mappedBy = "classe")
 	ArrayList<Module> modules = new ArrayList<Module>();
 	
-	@OneToMany()
+	@OneToMany(mappedBy = "classe")
 	ArrayList<Etudiant> etudiants = new ArrayList<Etudiant>();
 	
 	@OneToOne
-	@JoinColumn(name="id_emploi")
 	EmploiDuTemps emploi;
 	
 
