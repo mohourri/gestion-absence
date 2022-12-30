@@ -32,7 +32,6 @@ public class EnseignantController {
 	
 	@RequestMapping("/enseignants")
 	public String enseignants() {
-		System.out.println("ha ana !!!!!!!!!!!!!!!!!!!");
 		return "GestionEnseignant";
 	}
 	
