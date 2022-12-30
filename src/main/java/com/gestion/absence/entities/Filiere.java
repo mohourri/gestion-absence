@@ -10,9 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity  @AllArgsConstructor @NoArgsConstructor @Data
 public class Filiere {
@@ -24,6 +22,7 @@ public class Filiere {
 	String libelle;
 	
 	@OneToMany(mappedBy  = "filiere")
+
 	private List<Classe> classes = new ArrayList<Classe>();
 
 }

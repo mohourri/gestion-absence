@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
-import com.gestion.absence.entities.Enseignant;
 import com.gestion.absence.entities.Filiere;
 import com.gestion.absence.service.AjouterService;
 
