@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.gestion.absence.repository.EnsiengnantRepository;
 
-public class EnsiegnanController {
+public class EnseignanController_hajar {
   EnsiengnantRepository ensiengnantRepository;
   @GetMapping("/delete/{ID}")
   public String deleteenseignant(@PathVariable(name = "ID") Long ID) {

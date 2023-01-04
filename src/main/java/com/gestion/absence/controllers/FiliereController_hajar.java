@@ -7,7 +7,7 @@ import com.gestion.absence.entities.Filiere;
 import com.gestion.absence.repository.FiliereRepository;
 
 @Controller
-public class FliereController {
+public class FiliereController_hajar {
 
 	FiliereRepository filiereRepository;
  @GetMapping("/delete/{ID}")
