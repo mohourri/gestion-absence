@@ -7,4 +7,6 @@ public class CoursController {
 	
 	
 	int a = 0;
+	
+	float ff ;
 }
