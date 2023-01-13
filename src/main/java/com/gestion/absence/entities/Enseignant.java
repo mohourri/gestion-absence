@@ -1,6 +1,7 @@
 package com.gestion.absence.entities;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -13,9 +14,9 @@ import lombok.NoArgsConstructor;
 public class Enseignant extends User {
 	
 	@OneToMany(mappedBy = "enseignant")
-	private ArrayList<Module> modules = new ArrayList<Module>();
+	private List<Module> modules ;
 
-	public Enseignant(String nom, String prenom, String email, String password, ArrayList<Module> modules) {
+	public Enseignant(String nom, String prenom, String email, String password, List<Module> modules) {
 		super(nom, prenom, email, password);
 		this.modules = modules;
 	}
