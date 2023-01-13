@@ -22,7 +22,6 @@ public class Filiere {
 	String libelle;
 	
 	@OneToMany(mappedBy  = "filiere")
-
 	private List<Classe> classes = new ArrayList<Classe>();
 
 }
