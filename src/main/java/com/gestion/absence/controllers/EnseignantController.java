@@ -33,15 +33,11 @@ public class EnseignantController {
 	@Autowired
 	private EnseignantRepository enseignantRepository;
 	
-	@Controller
-	public class enseignantsController {
-
-	    @GetMapping("/enseignants")
-	    public ModelAndView listerEnseignants() {
-			List<Enseignant> ens = enseignantRepository.findAll();
-	        return new ModelAndView("enseignants", "ens", ens);
-	    }
-	}
+    @GetMapping("/enseignants")
+    public ModelAndView listerEnseignants() {
+		List<Enseignant> ens = enseignantRepository.findAll();
+        return new ModelAndView("enseignants", "ens", ens);
+    }
 
 	
 	
@@ -83,12 +79,12 @@ public class EnseignantController {
         
 	}
 	
-	
-	@GetMapping("/enseignants/chercher")
-	public String rechercherEtudiant(@RequestParam String nom,Model model){
-			model.addAttribute("listEns", enseignantRepository.findByNom(nom));
-			return "enseignants";
-	}
+	@GetMapping("/enseignants/chercherParNom")
+    public ModelAndView chercherEnseignant(	@RequestParam("nom") String nom) {
+		List<Enseignant> ens = enseignantRepository.findByNom(nom);
+		System.out.println(ens);
+        return new ModelAndView("enseignants", "ens", ens);
+    }
 	
 
 }
