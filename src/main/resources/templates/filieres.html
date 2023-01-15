@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -213,7 +213,7 @@ form.example::after {
 
 .deco:hover{
     color:white;
-    background-color: 7386D5;
+    background-color: #7386D5;
 }
 .table-responsive {
     margin: 30px 0;
@@ -515,7 +515,11 @@ table.table .avatar {
                                     <h2>Gestion Filière</h2>
                                 </div>
                                 <div class="col-sm-6">
-                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span> Nouvelle Filière</span></a>
+                                    <a
+                                            th:href="@{/addFiliereForm}"
+                                            class="btn btn-success">
+                                        <span> Nouvelle filiere</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -523,49 +527,31 @@ table.table .avatar {
                             <thead>
                                 <tr>
                                     
-                                    <th>Nom</th>
-                                    <th>prenom</th>
-                                    <th>Email</th>
-                                    <th>Password</th>
-                                    <th>Actions</th>
+                                    <th>Libelle</th>
+
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr th:each="fil : ${listfilieres}">
+                                <td th:text="${fil.libelle}"/>
 
-                                    <td >aaaaaaa</td>
-                                    <td>aaaaaaa</td>
-                                    <td >aaaaaaa</td>
-                                    <td >aaaaaaa</td>
-                                    
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
 
-                                    <td >aaaaaaa</td>
-                                    <td>aaaaaaa</td>
-                                    <td >aaaaaaa</td>
-                                    <td >aaaaaaa</td>
-                                    
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
 
-                                    <td >aaaaaaa</td>
-                                    <td>aaaaaaa</td>
-                                    <td >aaaaaaa</td>
-                                    <td >aaaaaaa</td>
-                                    
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
+
+
+                                <td   >
+
+                                    <a class="btn btn-warning btn-circle"
+                                       th:href="@{/showUpdateFiliereForm(ID=${fil.getID()})}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                    </a>
+
+
+                                    <a
+                                            th:href="@{/deleteFiliere(ID=${fil.getID()})}"
+                                            class="btn btn-danger btn-circle">
+                                        <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                                    </a>
+                                </td>
                                 </tr>
                             
                          
