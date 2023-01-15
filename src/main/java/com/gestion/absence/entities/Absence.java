@@ -23,7 +23,7 @@ public class Absence {
 	Boolean absent = true;
 	
 	@ManyToOne
-	Etudiant etudiant;
+	 Etudiant etudiant;
 	
 	@ManyToOne
 	Cour cour;

@@ -43,7 +43,7 @@ public class Classe {
 	List<Etudiant> etudiants = new ArrayList<>();
 	
 	@OneToOne
-	EmploiDuTemps emploi;
+	EmploiDuTemps emploi ;
 	
 
 }

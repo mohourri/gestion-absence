@@ -529,7 +529,7 @@ DEMO STYLE
             <div class="card-body">
               <div>
 
-                <form th:action="@{/saveEtudiant}" th:object="${etudiant}" method="POST">
+                <form  th:action="@{/saveEtudiant}" th:object="${etudiant}" method="POST">
 
                   <input type="text" th:field="*{CNE}" placeholder="CNE" class="form-control col-6 mb-4" />
                   <input type="text" th:field="*{nom}" placeholder="Nom " class="form-control col-6 mb-4" />

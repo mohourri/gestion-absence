@@ -51,6 +51,6 @@ public class EtudiantController {
     @GetMapping("/deleteEtudiant")
     public String deleteEtudiant(@RequestParam String CNE) {
         etudiantRepository.deleteById(CNE);
-        return "redirect:etudiant";
+         return "redirect:etudiant";
     }
 }

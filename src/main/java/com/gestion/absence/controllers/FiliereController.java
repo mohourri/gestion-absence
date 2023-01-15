@@ -18,7 +18,7 @@ public class FiliereController {
 	@Autowired
 	private FiliereRepository filiereRepository;
 
-	@GetMapping("/filieres")
+	 @GetMapping("/filieres")
 	public ModelAndView getFiliere(){
 		ModelAndView modelAndView = new ModelAndView("filieres");
 		modelAndView.addObject("listfilieres", filiereRepository.findAll());

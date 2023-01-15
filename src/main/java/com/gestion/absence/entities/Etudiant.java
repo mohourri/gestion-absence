@@ -21,7 +21,7 @@ public class Etudiant {
 	String nom;
 	String prenom;
 	
-	@ManyToOne()
+	@ManyToOne ()
 	Classe classe;
 	
 
