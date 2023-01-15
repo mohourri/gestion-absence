@@ -516,7 +516,7 @@ table.table .avatar {
                                 </div>
                                 <div class="col-sm-6">
                                     <a
-                                            th:href="@{/addEdutiantForm}"
+                                            th:href="@{/addEtudiantForm}"
                                             class="btn btn-success">
                                         <span> Nouvel etudiant</span>
                                     </a>
@@ -530,6 +530,7 @@ table.table .avatar {
                                     <th>CNE</th>
                                     <th>prenom</th>
                                     <th>nom</th>
+                                    <th>classe</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -537,6 +538,8 @@ table.table .avatar {
                                 <td th:text="${etu.CNE}"/>
                                     <td th:text="${etu.getPrenom()}"/>
                                     <td th:text="${etu.getNom()}"/>
+                                  <!--  <td th:text="${etu.getClasse()}"/>!-->
+
 
 
 
@@ -545,12 +548,12 @@ table.table .avatar {
                                 <td   >
 
                                     <a class="btn btn-warning btn-circle"
-                                       th:href="@{/showUpdateEtidiantForm(CNE=${etu.getCNE()})}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                       th:href="@{/showUpdateEtudiantForm(CNE=${etu.getCNE()})}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
 
 
                                     <a
-                                            th:href="@{/deleteFiliere(CNE=${etu.getCNE()})}"
+                                            th:href="@{/deleteEtudiant(CNE=${etu.getCNE()})}"
                                             class="btn btn-danger btn-circle">
                                         <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                                     </a>
@@ -589,49 +592,7 @@ table.table .avatar {
                     </div>
                 </div>
             </div>
-            <!-- Edit Modal HTML -->
-            <div id="editEmployeeModal" class="modal fade#editEmployeeModal#editEmployeeModal#editEmployeeModal               <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">						
-                                <h4 class="modal-title">Modifier filière</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">					
-                                <div class="form-group">
-                                    <label>Libellé</label>
-                                    <input name="libelle" type="text" class="form-control" required>
-                                </div>
-                                			
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="annuler">
-                                <input type="submit" class="btn btn-info" value="valider">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Delete Modal HTML -->
-            <div id="deleteEmployeeModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">						
-                                <h4 class="modal-title">Suprimer Filière</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">					
-                                <p>Voulez-vous supprimer cette Filière?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                <input type="submit" class="btn btn-danger" value="Delete">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+
             </body>
             
             <div class="line"></div>

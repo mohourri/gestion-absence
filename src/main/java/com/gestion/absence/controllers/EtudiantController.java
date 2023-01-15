@@ -33,7 +33,7 @@ public class EtudiantController {
     }
 
     @PostMapping("/saveEtudiant")
-    public String saveFiliere(@ModelAttribute Etudiant etudiant) {
+    public String saveEtudiant(@ModelAttribute Etudiant etudiant) {
         etudiantRepository.save(etudiant);
 
         return "redirect:/etudiant";
@@ -49,7 +49,7 @@ public class EtudiantController {
 
     }
     @GetMapping("/deleteEtudiant")
-    public String deleteFiliere(@RequestParam String CNE) {
+    public String deleteEtudiant(@RequestParam String CNE) {
         etudiantRepository.deleteById(CNE);
         return "redirect:etudiant";
     }

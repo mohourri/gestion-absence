@@ -24,7 +24,6 @@ public class Etudiant {
 	@ManyToOne()
 	Classe classe;
 	
-	@OneToMany(mappedBy = "etudiant")
-	ArrayList<Absence> absences = new ArrayList<Absence>();
+
 	
 }
