@@ -1,6 +1,8 @@
 package com.gestion.absence.service;
 
 
+import com.gestion.absence.entities.Admin;
+import com.gestion.absence.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +19,9 @@ public class AjouterService {
 	EnseignantRepository enseignantRepo;
 	@Autowired
 	FiliereRepository filiereRepo;
+
+	@Autowired
+	AdminRepository adminRepository;
 	
 	public void AjouterEnseignant(Enseignant ens) {
 		enseignantRepo.save(ens);
@@ -25,4 +30,6 @@ public class AjouterService {
 	public void AjouterFiliere(Filiere filiere) {
 		filiereRepo.save(filiere);
 	}
+
+	public void AjouterAdmin(Admin admin){ adminRepository.save(admin);}
 }
